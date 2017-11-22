@@ -1,0 +1,29 @@
+<!-- events data -->
+<div class="events_table">
+    <!--table header-->
+    <div class="events_table_header">
+        <ul class="table-row-content">
+            <li class="table-cell datetime_cell"><span>Date</span></li>
+            <li class="table-cell name_cell"><span>Name</span></li>
+            <li class="table-cell place_cell"><span>City</span></li>
+            <li class="table-cell place_cell"><span>State</span></li>
+            <li class="table-cell datetime_cell"><span>Starts at</span></li>
+            <li class="table-cell datetime_cell"><span>Local time</span></li>
+            <li class="table-cell datetime_cell"><span>Start in</span></li>
+        </ul>
+    </div> <!-- /.events_table_header -->
+    <!--events rows-->
+    <div class="events_table_rows">
+        <a ng-class="{current_event: event.thisWeek}" data-ng-repeat="event in upcomingEvents | orderBy:sortType:sortReverse" data-ng-href="#!/upcomingEvents/{{event.event_id}}" class="table-row">
+            <ul class="table-row-content">
+                <li class="table-cell datetime_cell"><span>{{event.date_start}}</span></li>
+                <li class="table-cell name_cell"><span>{{event.long_name}}</span></li>
+                <li class="table-cell place_cell"><span>{{event.city}}</span></li>
+                <li class="table-cell place_cell"><span>{{event.state}}</span></li>
+                <li class="table-cell datetime_cell"><span>{{event.startsAt}}</span></li>
+                <li class="table-cell datetime_cell"><span>{{event.localTime}}</span></li>
+                <li class="table-cell datetime_cell"><span>{{event.startIn}}</span></li>
+            </ul>
+        </a>
+    </div> <!-- /.events_table_rows -->
+</div> <!-- /.events_table -->

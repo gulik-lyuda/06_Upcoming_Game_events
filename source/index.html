@@ -1,0 +1,35 @@
+<!doctype html>
+<html ng-app="upcomingEventsApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Upcoming Game Events - Test Task</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/reset.css"> <!-- reset all pre-defined styles -->
+    <link href="css/vendors/bootstrap.min.css" rel="stylesheet"> <!-- bootstrap styles-->
+    <link rel="stylesheet" href="css/base.css"> <!-- our general styles-->
+</head>
+<body>
+    <div class="wrapper" ng-app="upcomingEventsApp" ng-controller="upcomingEventsCtrl">
+        <header class="page_header">
+            <h1>Upcoming Game Events</h1>
+        </header> <!-- /.page_header -->
+
+        <div ng-view></div>
+    </div>  <!-- /.wrapper -->
+
+    <!-- Angular Javascript -->
+    <script src="js/vendors/angular.min.js"></script>
+    <!-- Angular Route Javascript -->
+    <script src="js/vendors/angular-route.min.js"></script>
+    <!-- Moment Javascript -->
+    <script src="js/vendors/moment.min.js"></script>
+    <!-- Moment Timezone Javascript -->
+    <script src="js/vendors/moment-timezone-with-data.min.js"></script>
+    <!-- Google maps Javascript-->
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="js/vendors/ng-map.min.js"></script>`
+    <!-- Our main.js -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<div class="jumbotron" data-ng-repeat="event in event_details">
+    <p><a class="btn btn-primary btn-lg" ng-click="$back()" role="button">Back</a></p>
+    <div class="event_details">
+        <div class="details_info">
+            <ul class="list-group">
+                <li class="list-group-item"><strong>Event ID:</strong> {{event.event_id}}</li>
+                <li class="list-group-item"><strong>Short name:</strong> {{event.name}}</li>
+                <li class="list-group-item"><strong>Full name:</strong> {{event.long_name}}</li>
+                <li class="list-group-item"><strong>Start date:</strong> {{event.date_start}}</li>
+                <li class="list-group-item"><strong>Finish date:</strong> {{event.date_end}}</li>
+                <li class="list-group-item"><strong>Time zone:</strong> {{event.timezone}}</li>
+                <li class="list-group-item"><strong>City:</strong> {{event.city}}</li>
+                <li class="list-group-item"><strong>State:</strong> {{event.state}}</li>
+                <li class="list-group-item"><strong>Address:</strong> {{event.address}}</li>
+                <li class="list-group-item"><strong>Has mixed gender teams:</strong> {{event.has_coed_teams}}</li>
+                <li class="list-group-item"><strong>Has female teams:</strong> {{event.has_female_teams}}</li>
+                <li class="list-group-item"><strong>Has male teams:</strong> {{event.has_male_teams}}</li>
+                <li class="list-group-item"><strong>Email:</strong> {{event.email}}</li>
+                <li class="list-group-item"><strong>Website:</strong> {{event.website}}</li>
+                <li class="list-group-item"><strong>Data on athletes available:</strong> {{event.has_athletes}}</li>
+                <li class="list-group-item"><strong>Data on trainers available:</strong> {{event.has_staff}}</li>
+                <li class="list-group-item"><strong>Current:</strong> {{event.current}}</li>
+            </ul>
+        </div>
+        <div class="map">
+            <ng-map zoom="11" center="{{event.address}}, {{event.city}}">
+                <marker position="{{event.address}}, {{event.city}}" title="{{event.address}}, {{event.city}}" animation="Animation.BOUNCE"/>
+                <control name="overviewMap" opened="true" />
+            </ng-map>`
+        </div>
+    </div>
+</div>

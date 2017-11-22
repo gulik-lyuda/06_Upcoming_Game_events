@@ -1,0 +1,91 @@
+.current_event {
+  color: red;
+}
+
+.wrapper {
+  padding: 20px;
+
+  .page_header {
+
+  }
+
+
+
+  .events_table {
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+
+    &_header {
+      font-weight: bold;
+
+      display: table;
+      width: 100%;
+    }
+
+    &_rows {
+
+      .table-row {
+        display: table;
+        width: 100%;
+      }
+
+      .table-row:nth-of-type(even) .table-row-content{
+        background-color: #f7f7f7;
+      }
+
+    }
+  }
+
+  .table-row-content {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: table-row;
+    width: 100%;
+
+    border-bottom: 1px solid #ddd;
+
+    .table-cell {
+      display: table-cell;
+      padding: 10px 20px;
+    }
+
+    .datetime_cell {
+      width: 8%;
+    }
+    .name_cell {
+      width: 40%;
+    }
+    .place_cell {
+      width: 12%;
+    }
+  }
+
+  .event_details {
+    width: 100%;
+    overflow: hidden;
+
+    .details_info {
+      width: 30%;
+      float: left;
+
+    }
+
+    .map {
+      width: 70%;
+      height: 650px;
+      float: left;
+
+      ng-map {
+        height: 100%;
+      }
+    }
+  }
+
+  .btn {
+    margin-left: 30px;
+    width: 150px;
+  }
+}

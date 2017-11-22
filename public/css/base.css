@@ -1,0 +1,49 @@
+.current_event {
+  color: red; }
+
+.wrapper {
+  padding: 20px; }
+  .wrapper .events_table {
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd; }
+    .wrapper .events_table_header {
+      font-weight: bold;
+      display: table;
+      width: 100%; }
+    .wrapper .events_table_rows .table-row {
+      display: table;
+      width: 100%; }
+    .wrapper .events_table_rows .table-row:nth-of-type(even) .table-row-content {
+      background-color: #f7f7f7; }
+  .wrapper .table-row-content {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: table-row;
+    width: 100%;
+    border-bottom: 1px solid #ddd; }
+    .wrapper .table-row-content .table-cell {
+      display: table-cell;
+      padding: 10px 20px; }
+    .wrapper .table-row-content .datetime_cell {
+      width: 8%; }
+    .wrapper .table-row-content .name_cell {
+      width: 40%; }
+    .wrapper .table-row-content .place_cell {
+      width: 12%; }
+  .wrapper .event_details {
+    width: 100%;
+    overflow: hidden; }
+    .wrapper .event_details .details_info {
+      width: 30%;
+      float: left; }
+    .wrapper .event_details .map {
+      width: 70%;
+      height: 650px;
+      float: left; }
+      .wrapper .event_details .map ng-map {
+        height: 100%; }
+  .wrapper .btn {
+    margin-left: 30px;
+    width: 150px; }
